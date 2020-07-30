@@ -6,17 +6,18 @@
 DigitalOut myblueled(D3);
 DigitalOut myredled (D2);
 DigitalIn mybutton (D4);
+Grove_LCD_RGB_Backlight mylcd(D15, D14);
 /*DigitalOut mylightsensor (D2);*/
 /*DigitalOut mySensor(D2); */
 
 int main() {  
       
         
-
+    mylcd.setRGB(0xff,0xff, 0xff);
     BSP_LCD_Init();
     BSP_LCD_LayerDefaultInit(LTDC_ACTIVE_LAYER, LCD_FB_START_ADDRESS);
     BSP_LCD_SelectLayer(LTDC_ACTIVE_LAYER);
-    BSP_LCD_Clear(LCD_COLOR_BLACK); //gg
+    BSP_LCD_Clear(LCD_COLOR_BLACK);
     BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
     BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
     BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"DAVID", CENTER_MODE);
@@ -26,7 +27,7 @@ int main() {
     {    
    
         if (mybutton == 1)
-    {
+        {
             BSP_LCD_Clear(LCD_COLOR_WHITE);
             BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON", CENTER_MODE);                     
             myblueled = 1;
