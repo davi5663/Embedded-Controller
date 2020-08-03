@@ -70,8 +70,7 @@ int main() {
           myredled = 0;
           BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
           BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
-          /* BSP_LCD_DrawRect(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 40,
-           * 50);*/ //Tried to create a rectangle as a button to reset my Counter
+          /* BSP_LCD_DrawRect(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 40,* 50);*/ //Tried to create a rectangle as a button to reset my Counter
           BSP_LCD_ClearStringLine(4); // Clears string number 4 which is line 30
           BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"NOT PRESSING THE BUTTON",CENTER_MODE);
           /*mylightsensor = 0;*/
