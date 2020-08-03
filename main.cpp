@@ -8,7 +8,7 @@ DigitalIn mybutton(D4);
 Grove_LCD_RGB_Backlight mylcd(D14, D15);
 DigitalIn mytouchsensor(D8);
 /*DigitalOut mylightsensor (D2);*/
-Thread t;    // Creates Thread
+Thread t;    // Creates Thread, threads can run more then one project at a time without intterupting each other.
 int num = 0; // Declares the number
 
 void Numbercounter() {
