@@ -6,8 +6,8 @@ DigitalOut myblueled(D3);
 DigitalOut myredled(D2);
 DigitalIn mybutton(D4);
 Grove_LCD_RGB_Backlight mylcd(D14, D15);
+//DigitalOut mytouchsensor(D8);
 /*DigitalOut mylightsensor (D2);*/
-/*DigitalOut mySensor(D2); */
 Thread t;    // Creates Thread
 int num = 0; // Declares the number
 
@@ -44,8 +44,7 @@ int main() {
         if (mybutton == 1) {
           num = 0;
           BSP_LCD_Clear(LCD_COLOR_WHITE);
-          BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON",
-                                  CENTER_MODE);
+          BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON",CENTER_MODE);
           myblueled = 1;
           myredled = 1;
           ThisThread::sleep_for(100); // Wait in miliseconds, this is 0.1 second
