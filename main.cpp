@@ -33,28 +33,28 @@ int main() {
   BSP_LCD_Clear(LCD_COLOR_BLACK);
   BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
-  BSP_LCD_DisplayStringAt(0, 0, (uint8_t *)"WELCOME TO MY PROJECT!", CENTER_MODE); //The first number 0 goes more to the right direction
-  BSP_LCD_DisplayStringAt(0, 50, (uint8_t *)"MY NAME IS DAVID", CENTER_MODE); //50 goes more down
+  BSP_LCD_DisplayStringAt(
+      0, 0, (uint8_t *)"WELCOME TO MY PROJECT!",
+      CENTER_MODE); // The first number 0 goes more to the right direction
+  BSP_LCD_DisplayStringAt(0, 50, (uint8_t *)"MY NAME IS DAVID",
+                          CENTER_MODE); // 50 goes more down
   HAL_Delay(1000);
   t.start(&Numbercounter);
   while (1) {
     if (mybutton == 1) {
       while (1) {
 
-        if (mytouchsensor == 1){
-            num = 0;
-            mylcd.clear();
-            mylcd.print("Reseting...");
-            num = 0;
+        if (mytouchsensor == 1) {
+          mylcd.clear();
+          mylcd.print("Reseting...");
+          num = 0;
         }
 
-
-        
-        
         if (mybutton == 1) {
-          //num = 0;
+          // num = 0;
           BSP_LCD_Clear(LCD_COLOR_WHITE);
-          BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON",CENTER_MODE);
+          BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON",
+                                  CENTER_MODE);
           myblueled = 1;
           myredled = 1;
           ThisThread::sleep_for(100); // Wait in miliseconds, this is 0.1 second
@@ -70,9 +70,11 @@ int main() {
           myredled = 0;
           BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
           BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
-          /* BSP_LCD_DrawRect(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 40, 50);*/ //Tried to create a rectangle as a button to reset my Counter
+          /* BSP_LCD_DrawRect(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 40,
+           * 50);*/ //Tried to create a rectangle as a button to reset my Counter
           BSP_LCD_ClearStringLine(4); // Clears string number 4 which is line 30
-          BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"NOT PRESSING THE BUTTON",  CENTER_MODE);
+          BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"NOT PRESSING THE BUTTON",
+                                  CENTER_MODE);
           /*mylightsensor = 0;*/
           /* mySensor = 0;*/
         }
