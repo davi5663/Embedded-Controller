@@ -1,6 +1,6 @@
-#include "Grove_LCD_RGB_Backlight.h"
+#include "Grove_LCD_RGB_Backlight.h" //Libary for LCD Backligt
 #include "mbed.h"
-#include "stm32746g_discovery_lcd.h"
+#include "stm32746g_discovery_lcd.h" //Libary for TouchScreen
 
 DigitalOut myblueled(D3);
 DigitalOut myredled(D2);
