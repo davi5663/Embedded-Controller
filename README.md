@@ -8,7 +8,7 @@ BSP_DISCO_F746NG <br/>
 GROVE_LCD_RGB_Backlight
 
 <b>Functionality:</b><br/>
-When the Controller starts up you will see a Welcome page with a black background my name will show up and a welcome message. When you press the button you will be 
+When the Controller starts up you will see a Welcome page with a black background with my name and a welcome message. When you press the button you will be 
 redirected, to a new screen. 
 When you don't press the button, a message will be shown. When you press the button a new message will show up and the diodes will begin to blink. 
 When pressing the TouchSensor it will reset the counter, and a little message will also show up.
