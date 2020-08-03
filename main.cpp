@@ -47,6 +47,7 @@ int main() {
         if (mytouchsensor == 1) {
           mylcd.clear();
           mylcd.print("Reseting...");
+          ThisThread::sleep_for(100);
           num = 0;
         }
 
