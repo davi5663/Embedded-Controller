@@ -2,7 +2,7 @@
 <b>Short description:</b><br/>
 In this project I have worked with Embedded Controller. I made a few small functions which I used C++ as my programing language. To my project, I have used 2 diodes
 a button an LCD Screen and a TouchSensor. <br/>
-The Libraries I have used for my project: <br/>
+<b>The Libraries I used for my project:</b> <br/>
 mbed-os 6.2.0 <br/>
 BSP_DISCO_F746NG <br/>
 GROVE_LCD_RGB_Backlight
