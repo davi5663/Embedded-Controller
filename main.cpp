@@ -54,8 +54,7 @@ int main() {
         if (mybutton == 1) {
           // num = 0;
           BSP_LCD_Clear(LCD_COLOR_WHITE);
-          BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON",
-                                  CENTER_MODE);
+          BSP_LCD_DisplayStringAt(0, LINE(4), (uint8_t *)"PRESSING BUTTON", CENTER_MODE);
           myblueled = 1;
           myredled = 1;
           ThisThread::sleep_for(100); // Wait in miliseconds, this is 0.1 second
@@ -74,8 +73,7 @@ int main() {
           /* BSP_LCD_DrawRect(BSP_LCD_GetXSize()/2, BSP_LCD_GetYSize()/2, 40,
            * 50);*/ //Tried to create a rectangle as a button to reset my Counter
           BSP_LCD_ClearStringLine(4); // Clears string number 4 which is line 30
-          BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"NOT PRESSING THE BUTTON",
-                                  CENTER_MODE);
+          BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"NOT PRESSING THE BUTTON",CENTER_MODE);
           /*mylightsensor = 0;*/
           /* mySensor = 0;*/
         }
