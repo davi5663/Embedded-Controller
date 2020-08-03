@@ -15,7 +15,7 @@ When pressing the TouchSensor it will reset the counter, and a little message wi
 
 <b>Changes/Problems/New Functions:</b><br/>
 In the future I want to make a rectangle to be used as a button! I could not do it because of I do not have that much knowledge with mbed. I did have some troubles
-and problems, but I managed to fix the them. But in the end I can say that I am really happy and proud of what I created considering, this is the first time 
+and problems, but I managed to fix them. But in the end I can say that I am really happy and proud of what I created considering, this is the first time 
 for me using mbed and also C++. 
 
 <b>Created by David Szelmeczi <br/>
