@@ -8,7 +8,7 @@ DigitalIn mybutton(D4);
 Grove_LCD_RGB_Backlight mylcd(D14, D15);
 /*DigitalOut mylightsensor (D2);*/
 /*DigitalOut mySensor(D2); */
-Thread t;    // Creates Thred
+Thread t;    // Creates Thread
 int num = 0; // Declares the number
 
 void Numbercounter() {
@@ -23,7 +23,7 @@ void Numbercounter() {
 }
 
 int main() {
-  printf("program started...");
+  printf("Program started...");
 
   mylcd.setRGB(0xff, 0xff, 0xff);
   // mylcd.print("We drive fast cars!");
@@ -33,7 +33,8 @@ int main() {
   BSP_LCD_Clear(LCD_COLOR_BLACK);
   BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
-  BSP_LCD_DisplayStringAt(0, 1, (uint8_t *)"WELCOME TO MY PROJECT! MY NAME IS DAVID", CENTER_MODE);
+  BSP_LCD_DisplayStringAt(0, 0, (uint8_t *)"WELCOME TO MY PROJECT!", CENTER_MODE); //The first number 0 goes more to the right direction
+  BSP_LCD_DisplayStringAt(0, 50, (uint8_t *)"MY NAME IS DAVID", CENTER_MODE); //50 goes more down
   HAL_Delay(1000);
   t.start(&Numbercounter);
   while (1) {
