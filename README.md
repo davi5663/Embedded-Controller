@@ -11,5 +11,6 @@ The diodes will begin to blink.
 <b>Changes/Problems/New Functions:</b><br/>
 In the future I want to make my rectangle to be used as a button! I could not do it because of I do not have that much knowledge with mbed. I did have some troubles
 and problems. But in the end I can say that I am really happy and proud of what I created considering, this is the first time for me using mbed and also C++. 
+If I can't get the rectangle to work, I want to add the touch sensor as my reset button.
 
 <b>Created by David Szelmeczi</b>

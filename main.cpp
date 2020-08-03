@@ -6,7 +6,7 @@ DigitalOut myblueled(D3);
 DigitalOut myredled(D2);
 DigitalIn mybutton(D4);
 Grove_LCD_RGB_Backlight mylcd(D14, D15);
-//DigitalOut mytouchsensor(D8);
+DigitalOut mytouchsensor(D8);
 /*DigitalOut mylightsensor (D2);*/
 Thread t;    // Creates Thread
 int num = 0; // Declares the number
