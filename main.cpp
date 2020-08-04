@@ -34,10 +34,8 @@ int main() {
   BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
   BSP_LCD_DisplayStringAt(
-      0, 0, (uint8_t *)"WELCOME TO MY PROJECT!",
-      CENTER_MODE); // The first number 0 goes more to the right direction
-  BSP_LCD_DisplayStringAt(0, 50, (uint8_t *)"MY NAME IS DAVID",
-                          CENTER_MODE); // 50 goes more down
+      0, 0, (uint8_t *)"WELCOME TO MY PROJECT!",CENTER_MODE); // The first number 0 goes more to the right direction
+  BSP_LCD_DisplayStringAt(0, 50, (uint8_t *)"MY NAME IS DAVID", CENTER_MODE); // 50 goes more down
   HAL_Delay(1000);
   t.start(&Numbercounter);
   while (1) {
