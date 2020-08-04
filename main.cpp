@@ -14,7 +14,7 @@ int num = 0; // Declares the number
 void Numbercounter() {
   while (1) {
     char maxlength[20];                       // How long the character can be
-    sprintf(maxlength, "Number is: %d", num); //%d helps to print the integer
+    sprintf(maxlength, "Number is: %d", num); //%d helps to print the integer, format string for char array is what sprintf is used for
     mylcd.clear();
     mylcd.print(maxlength);
     num++; // Counts up the number
