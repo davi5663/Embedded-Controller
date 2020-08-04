@@ -3,17 +3,17 @@
 #include "stm32746g_discovery_lcd.h" //Libary for TouchScreen
 
 DigitalOut myblueled(D3);
-DigitalOut myredled(D2);
-DigitalIn mybutton(D4);
+DigitalOut myredled(D2); //Configures and controls the digital output pin
+DigitalIn mybutton(D4); //Reads the value of the digital input pin
 Grove_LCD_RGB_Backlight mylcd(D14, D15);
 DigitalIn mytouchsensor(D8);
 /*DigitalOut mylightsensor (D2);*/
-Thread t;    // Creates Thread, threads can run more then one project at a time without intterupting each other.
+Thread t;    // Creates Thread, threads can run more then one project at a time without interupting each other.
 int num = 0; // Declares the number
 
 void Numbercounter() {
   while (1) {
-    char maxlength[20];                       // How long the character can be
+    char maxlength[20];// How much charachters the array can hold
     sprintf(maxlength, "Number is: %d", num); //%d helps to print the integer, format string for char array is what sprintf is used for
     mylcd.clear();
     mylcd.print(maxlength);
@@ -33,8 +33,7 @@ int main() {
   BSP_LCD_Clear(LCD_COLOR_BLACK);
   BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
-  BSP_LCD_DisplayStringAt(
-      0, 0, (uint8_t *)"WELCOME TO MY PROJECT!",CENTER_MODE); // The first number 0 goes more to the right direction
+  BSP_LCD_DisplayStringAt(0, 0, (uint8_t *)"WELCOME TO MY PROJECT!",CENTER_MODE); // The first number 0 goes more to the right direction
   BSP_LCD_DisplayStringAt(0, 50, (uint8_t *)"MY NAME IS DAVID", CENTER_MODE); // 50 goes more down
   HAL_Delay(1000);
   t.start(&Numbercounter);
